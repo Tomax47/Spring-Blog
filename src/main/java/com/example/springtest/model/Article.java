@@ -17,7 +17,7 @@ public class Article {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long article_id;
+    private Long articleId;
 
     private String name;
 
@@ -31,7 +31,7 @@ public class Article {
 
     @ManyToMany
     @JoinTable(name = "article_likes",
-            joinColumns = @JoinColumn(name = "article_id", referencedColumnName = "article_id"), // First table joinColumns
+            joinColumns = @JoinColumn(name = "articleId", referencedColumnName = "articleId"), // First table joinColumns
             inverseJoinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id")) // Second table inverseJoinColumns "The user id"
     private List<User> likes; // In the inverseJoinColumns, it gets that it needs to get the id field from the User cuz in the private List<User> likes we specified a list of User objects
 }

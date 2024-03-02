@@ -26,4 +26,7 @@ public class User {
 
     @OneToMany(mappedBy = "author")
     private List<Article> createdArticles;
+
+    @ManyToMany(mappedBy = "likes")
+    private List<Article> likedArticles;
 }

@@ -20,7 +20,7 @@ public class ArticleDto {
 
     public static ArticleDto from(Article article) {
         return ArticleDto.builder()
-                .id(article.getArticle_id())
+                .id(article.getArticleId())
                 .text(article.getText())
                 .authorName(article.getAuthor().getEmail())
                 .likesCount(article.getLikes().size())
